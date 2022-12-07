@@ -4,13 +4,13 @@
 
 <main>
   <div class="footer-content">
-    <img src="./src/assets/logo.png" alt="" />
+    <img src="./images/logo.png" alt="" />
     <span>ODONTOLOGIA</span>
     <span>ESPECIALIZADA</span>
     <div class="socials">
-      <img src="./src/assets/facebook.svg" alt="fb" />
-      <img src="./src/assets/instagram.svg" alt="instagram" />
-      <img src="./src/assets/whatsapp.svg" alt="wpp" />
+      <img src="./images/facebook.svg" alt="fb" />
+      <img src="./images/instagram.svg" alt="instagram" />
+      <img src="./images/whatsapp.svg" alt="wpp" />
     </div>
     <GoogleMap />
     <div class="contact-area">

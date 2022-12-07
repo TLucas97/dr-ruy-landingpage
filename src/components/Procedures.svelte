@@ -1,21 +1,7 @@
 <script>
-  const procedures = [
-    {
-      title: "Clareamento Dental",
-      text: "O clareamento dental é uma microlimpeza da estrututura do dente. Por causa de pigmentos externos, com o passar do tempo, o dente fica com uma cor mais amarelada.",
-      to: "/",
-    },
-    {
-      title: "Lente de Contato Dental",
-      text: "A odontologia estética evoluiu muito e, hoje, podemos afirmar que as lentes de contato dentais são o que há de mais sofisticado na estética dental.",
-      to: "/",
-    },
-    {
-      title: "Próteses total e parcial",
-      text: "Um dos procedimentos plásticos mais procurados atualmente por quem deseja um rosto mais fino e harmônico, a bichectomia inicialmente possuía fins exclusivamente odontológicos",
-      to: "/",
-    },
-  ];
+  import { globalContent } from "../../store.js";
+
+  const procedures = $globalContent.simpleProcedures;
 </script>
 
 <main>
@@ -37,6 +23,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+    }
 
     .card {
       display: flex;
@@ -79,14 +71,14 @@
     }
 
     .last-btn {
-        width: 80%;
-        height: 40px;
-        background: #091D3E;
-        border: none;
-        border-radius: 4px;
-        color: white;
-        font-weight: bold;
-        margin: 1em 0;
+      width: 80%;
+      height: 40px;
+      background: #091d3e;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      margin: 1em 0;
     }
   }
 </style>

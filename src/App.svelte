@@ -1,15 +1,12 @@
 <script>
+  import { Router, Route } from "svelte-navigator";
+  import Home from "./pages/Home.svelte";
   import Header from "./components/Header.svelte";
   import Footer from "./components/Footer.svelte";
-  import DocContent from "./components/DocContent.svelte";
-  import FamilyContennt from "./components/FamilyContennt.svelte";
-  import Procedures from "./components/Procedures.svelte";
 </script>
 
-<main>
+<Router>
   <Header />
-  <DocContent />
-  <FamilyContennt />
-  <Procedures />
+  <Route path="/" component={Home} />
   <Footer />
-</main>
+</Router>

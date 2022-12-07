@@ -1,48 +1,19 @@
 <script>
   // @ts-nocheck
-
   import IconButton from "@smui/icon-button";
   import Dialog from "@smui/dialog";
   import MenuSurface from "@smui/menu-surface";
+  import { globalContent } from "../../store.js";
 
   let surface = MenuSurface;
 
   let open = false;
 
-  let procedures = [
-    {
-      item: "Próteses total e parcial",
-      link: "/",
-    },
-    {
-      item: "Cirurgia oral menor",
-      link: "/",
-    },
-    {
-      item: "Clareamento dental",
-      link: "/",
-    },
-    {
-      item: "Lentes de contato",
-      link: "/",
-    },
-    {
-      item: "Bichectomia",
-      link: "/",
-    },
-    {
-      item: "Próteses sobre implantes",
-      link: "/",
-    },
-    {
-      item: "Periodontia",
-      link: "/",
-    },
-  ];
+  let procedures = $globalContent.headerProcedures;
 </script>
 
 <main class="header">
-  <img src="./src/assets/logo.png" alt="logo" />
+  <img src="./images/logo.png" alt="logo" />
   <IconButton
     class="material-icons"
     style="color: #fff"
@@ -103,10 +74,18 @@
       display: flex;
       flex-direction: column;
 
+      @media (min-width: 600px) {
+        padding-bottom: 1em;
+      }
+
       .close-btn {
         display: flex;
         justify-content: flex-end;
         padding: 0.5em;
+
+        @media (min-width: 600px) {
+          padding: 0;
+        }
       }
 
       .items {

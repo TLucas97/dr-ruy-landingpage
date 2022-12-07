@@ -1,8 +1,5 @@
 <main>
-  <img
-    src="https://ruytorres.com.br/wp-content/uploads/2022/11/familia_sorrindo-768x505.png"
-    alt=""
-  />
+  <img src="./images/family-banner.png" alt="family" />
   <span class="title">Tratamentos que oferecemos para você e sua família</span>
   <div class="description">
     <span>Conheça todas as especialidades que CEIO oferece.</span>
@@ -16,15 +13,27 @@
 <style lang="scss">
   main {
     background: #091d3e;
-    padding: 0.8em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
 
     img {
       width: 80%;
       margin: 0 auto;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
     }
 
     span {
       color: #ffff;
+
+      @media (min-width: 768px) {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
     }
 
     .title {
@@ -35,11 +44,17 @@
     }
 
     .description {
-        margin-top: 0.3em;
+      margin-top: 0.3em;
 
-        span {
-            font-size: 0.7rem;
-        }
+      @media (min-width: 768px) {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      span {
+        font-size: 0.7rem;
+      }
     }
   }
 </style>
