@@ -2,7 +2,7 @@
   import GoogleMap from "./GoogleMap.svelte";
 </script>
 
-<main>
+<main id="footer">
   <div class="footer-content">
     <img src="./images/logo.png" alt="" />
     <span>ODONTOLOGIA</span>

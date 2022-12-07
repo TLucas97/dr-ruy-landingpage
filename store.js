@@ -1,36 +1,6 @@
 import { writable } from "svelte/store";
 
 export const globalContent = writable({
-  headerProcedures: [
-    {
-      item: "Próteses total e parcial",
-      link: "/",
-    },
-    {
-      item: "Cirurgia oral menor",
-      link: "/",
-    },
-    {
-      item: "Clareamento dental",
-      link: "/",
-    },
-    {
-      item: "Lentes de contato",
-      link: "/",
-    },
-    {
-      item: "Bichectomia",
-      link: "/",
-    },
-    {
-      item: "Próteses sobre implantes",
-      link: "/",
-    },
-    {
-      item: "Periodontia",
-      link: "/",
-    },
-  ],
   simpleProcedures: [
     {
       title: "Clareamento Dental",

@@ -2,17 +2,22 @@
   // @ts-nocheck
   import IconButton from "@smui/icon-button";
   import Dialog from "@smui/dialog";
-  import MenuSurface from "@smui/menu-surface";
-  import { globalContent } from "../../store.js";
+  import { useNavigate } from "svelte-navigator";
 
-  let surface = MenuSurface;
+  let navigate = useNavigate();
 
   let open = false;
 
-  let procedures = $globalContent.headerProcedures;
+  const moveTo = (id) => {
+    open = false;
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
+  };
 </script>
 
-<main class="header">
+<main class="header" id="start">
   <img src="./images/logo.png" alt="logo" />
   <IconButton
     class="material-icons"
@@ -29,21 +34,22 @@
         >
       </div>
       <div class="items">
-        <button>Início</button>
-        <button>Contato</button>
+        <button
+          on:click={() => {
+            moveTo("start");
+            navigate("/");
+          }}>Início</button
+        >
+        <button on:click={() => moveTo("footer")}>Contato</button>
         <div class="procedure-area">
-          <button on:click={() => surface.setOpen(true)}>Procedimentos</button>
-          <MenuSurface bind:this={surface} anchorCorner="BOTTOM_LEFT">
-            <div class="procedure-list">
-              {#each procedures as procedure}
-                <button>
-                  {procedure.item}
-                </button>
-              {/each}
-            </div>
-          </MenuSurface>
+          <button>Procedimentos</button>
         </div>
-        <button>Quem somos</button>
+        <button
+          on:click={() => {
+            navigate("doc");
+            open = false;
+          }}>Quem somos</button
+        >
       </div>
     </div>
   </Dialog>
@@ -101,30 +107,6 @@
           color: white;
           margin: 1em 0;
           font-weight: 500;
-        }
-
-        .procedure-area {
-          margin: 0 auto;
-          width: 230px;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .procedure-list {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background: #ffffff;
-          padding: 1em;
-
-          button {
-            background: none;
-            border: none;
-            color: #000000a8;
-          }
         }
       }
     }

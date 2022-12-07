@@ -1,4 +1,4 @@
-<main>
+<main id="mobile-doc-content">
   <div class="banner-section">
     <span class="title">Dr. Ruy Torres</span>
     <span class="main-title">LENTES DE CONTATO</span>
