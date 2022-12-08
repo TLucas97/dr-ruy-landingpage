@@ -45,7 +45,7 @@
         openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
     />
   </div>
-  <div class="first-section-banner">
+  <div class="first-section-banner" style="background-image: url('./images/banner.png')">
     <div class="main-title-content fade-left">
       <span class="title"> DR. RUY TORRES </span>
       <span class="contact-text"> LENTES DE CONTATO </span>
@@ -135,7 +135,6 @@
     .first-section-banner {
       width: 100%;
       height: 600px;
-      background-image: url("./images/banner.png");
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
