@@ -1,7 +1,18 @@
 <script>
-  import { globalContent } from "../../store.js";
+  import { globalContent } from "../../../store.js";
+  import { useNavigate } from "svelte-navigator";
+
+  let navigate = useNavigate();
 
   const procedures = $globalContent.simpleProcedures;
+
+  const moveTo = (/** @type {string} */ route, /** @type {string} */ id) => {
+    navigate(route);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 </script>
 
 <main>
@@ -10,7 +21,9 @@
       <span class="title">{procedure.title}</span>
       <span class="description">{procedure.text}</span>
       <div class="btn-area">
-        <button>Saiba mais</button>
+        <button on:click={() => moveTo(procedure.to, procedure.id)}
+          >Saiba mais</button
+        >
       </div>
     </div>
   {/each}

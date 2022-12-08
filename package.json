@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@smui-extra/accordion": "^7.0.0-beta.0",
     "@smui/button": "^7.0.0-beta.0",
     "@smui/dialog": "^7.0.0-beta.0",
     "@smui/icon-button": "^7.0.0-beta.0",

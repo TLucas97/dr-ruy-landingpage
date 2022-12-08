@@ -1,3 +1,9 @@
+<script>
+  import { useNavigate } from "svelte-navigator";
+
+  let navigate = useNavigate();
+</script>
+
 <main id="mobile-doc-content">
   <div class="banner-section">
     <span class="title">Dr. Ruy Torres</span>
@@ -5,7 +11,7 @@
     <span class="sub-title"
       >PROCEDIMENTO SEGURO EFICAZ E COM RESULTADOS INCRIVEIS!</span
     >
-    <button>Saiba mais</button>
+    <button on:click={() => navigate("/teeth-contact")}>Saiba mais</button>
   </div>
   <div class="doctor-card">
     <div class="card-header">

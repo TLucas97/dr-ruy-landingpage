@@ -8,16 +8,17 @@
 
   let open = false;
 
-  const moveTo = (id) => {
+  const moveTo = (route, id) => {
+    navigate(route);
     open = false;
     setTimeout(() => {
       const element = document.getElementById(id);
       element.scrollIntoView({ behavior: "smooth" });
-    }, 1000);
+    }, 100);
   };
 </script>
 
-<main class="header" id="start">
+<main class="header">
   <img src="./images/logo.png" alt="logo" />
   <IconButton
     class="material-icons"
@@ -36,20 +37,34 @@
       <div class="items">
         <button
           on:click={() => {
-            moveTo("start");
-            navigate("/");
+            moveTo("/", "mobile-doc-content");
           }}>Início</button
         >
-        <button on:click={() => moveTo("footer")}>Contato</button>
+        <button on:click={() => moveTo("/", "footer")}>Contato</button>
         <div class="procedure-area">
-          <button>Procedimentos</button>
+          <button
+            on:click={() => {
+              moveTo("teeth-clear", "clear-start");
+              open = false;
+            }}>Clareamento Dental</button
+          >
         </div>
-        <button
-          on:click={() => {
-            navigate("doc");
-            open = false;
-          }}>Quem somos</button
-        >
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("teeth-contact", "contact-start");
+              open = false;
+            }}>Lentes de contato</button
+          >
+        </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("proteses", "protese-start");
+              open = false;
+            }}>Tipos de prótese</button
+          >
+        </div>
       </div>
     </div>
   </Dialog>

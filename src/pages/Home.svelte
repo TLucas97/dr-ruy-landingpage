@@ -1,7 +1,7 @@
 <script>
-  import DocContent from "../components/DocContent.svelte";
-  import FamilyContennt from "../components/FamilyContennt.svelte";
-  import Procedures from "../components/Procedures.svelte";
+  import DocContent from "../components/mobile/DocContent.svelte";
+  import FamilyContennt from "../components/mobile/FamilyContennt.svelte";
+  import Procedures from "../components/mobile/Procedures.svelte";
 </script>
 
 <main id="web-home fade">
