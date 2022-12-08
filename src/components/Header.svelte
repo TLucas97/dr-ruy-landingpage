@@ -19,7 +19,14 @@
 </script>
 
 <main class="header">
-  <img src="./images/logo.png" alt="logo" />
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <img
+    on:click={() => {
+      moveTo("/", "mobile-doc-content");
+    }}
+    src="./images/logo.png"
+    alt="logo"
+  />
   <IconButton
     class="material-icons"
     style="color: #fff"
