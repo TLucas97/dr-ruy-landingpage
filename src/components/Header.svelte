@@ -33,7 +33,7 @@
   };
 </script>
 
-<main class="header">
+<main class="header fade-top">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <img
     on:click={() => {
@@ -52,7 +52,7 @@
   <div class="menu-list">
     <button
       on:click={() => {
-        moveTo("/", "mobile-doc-content");
+        moveTo("/", "web-start-view");
       }}>Início</button
     >
     <button on:click={() => moveTo("/", "footer")}>Contato</button>

@@ -35,9 +35,9 @@
   };
 </script>
 
-<main>
+<main id="web-start-view">
   <div class="first-section-banner">
-    <div class="main-title-content">
+    <div class="main-title-content fade-left">
       <span class="title"> DR. RUY TORRES </span>
       <span class="contact-text"> LENTES DE CONTATO </span>
       <span class="contact-description">
