@@ -135,7 +135,7 @@
     .first-section-banner {
       width: 100%;
       height: 600px;
-      background: url("./images/banner.png");
+      background-image: url("./images/banner.png");
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
