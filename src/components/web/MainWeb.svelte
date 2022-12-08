@@ -119,7 +119,7 @@
     escapeKeyAction=""
     surface$style="width: 700px; max-width: calc(100vw - 32px);"
   >
-    <button class="modal-close-btn" on:click={closeModal}>❌</button>
+    <button class="modal-close-btn" on:click={closeModal}>X</button>
     {#if currentModalContent === "clear"}
       <TeethClearContent />
     {:else if currentModalContent === "contact"}
@@ -371,6 +371,7 @@
       font-weight: bold;
       position: fixed;
       background: none;
+      color: red;
 
       &:hover {
         transform: scale(1.1);
