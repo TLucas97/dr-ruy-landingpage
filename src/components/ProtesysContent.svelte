@@ -102,7 +102,7 @@
       }
 
       small {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         color: #333;
         text-align: center;
         margin: 1.5em 1em 0 1em;
@@ -112,13 +112,13 @@
         margin-top: 1em;
 
         .small-header {
-          font-size: 0.6rem;
+          font-size: 0.7rem;
           color: #333;
           font-weight: 600;
         }
 
         .small-content {
-          font-size: 0.6rem;
+          font-size: 0.8rem;
           color: #333;
           text-align: center;
         }
@@ -139,7 +139,7 @@
           border: none;
           border-radius: 0.2em;
           margin-top: 1em;
-          font-size: 0.7rem;
+          font-size: 0.9rem;
           font-weight: bold;
           cursor: pointer;
 
