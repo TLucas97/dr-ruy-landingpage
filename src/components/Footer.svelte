@@ -1,5 +1,9 @@
 <script>
   import GoogleMap from "./GoogleMap.svelte";
+
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
 </script>
 
 <main id="footer">
@@ -8,9 +12,25 @@
     <span>ODONTOLOGIA</span>
     <span>ESPECIALIZADA</span>
     <div class="socials">
-      <img src="./images/facebook.svg" alt="fb" />
-      <img src="./images/instagram.svg" alt="instagram" />
-      <img src="./images/whatsapp.svg" alt="wpp" />
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        src="./images/facebook.svg"
+        alt="fb"
+        on:click={() => openNewTab("https://www.facebook.com/rtodontopa/")}
+      />
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        src="./images/instagram.svg"
+        alt="instagram"
+        on:click={() => openNewTab("https://www.instagram.com/rtodontopa/")}
+      />
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        src="./images/whatsapp.svg"
+        alt="wpp"
+        on:click={() =>
+          openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+      />
     </div>
     <GoogleMap />
     <div class="contact-area">
@@ -20,20 +40,20 @@
           <div class="left">📍</div>
           <div class="right">
             <span
-              >123, Any Street North Your City Name Country Name. P.O 3554</span
+              >R. Domingos Marreiros, 49 - Umarizal, Belém - PA, 66055-210</span
             >
           </div>
         </div>
         <div>
           <div class="left">📞</div>
           <div class="right">
-            <span>+1 234 567 8902</span>
+            <span>(91) 98810-9828</span>
           </div>
         </div>
         <div>
           <div class="left">📧</div>
           <div class="right">
-            <span>+1 234 567 8902</span>
+            <span>druytorres@gmail.com</span>
           </div>
         </div>
       </div>
@@ -75,6 +95,13 @@
           width: 30px;
           height: 30px;
           margin: 0 0.5em;
+
+          cursor: pointer;
+
+          @media (min-width: 1280px) {
+            width: 60px;
+            height: 60px;
+          }
         }
       }
 

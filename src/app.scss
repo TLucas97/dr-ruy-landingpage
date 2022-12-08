@@ -7,6 +7,26 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2775ba;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @keyframes fade {
   from {
     opacity: 0;
