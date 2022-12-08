@@ -1,5 +1,9 @@
 <script>
   import Accordion, { Panel, Header, Content } from "@smui-extra/accordion";
+
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
 </script>
 
 <main class="fade" id="contact-start">
@@ -77,7 +81,11 @@
         </Panel>
       </Accordion>
       <div class="btn-area">
-        <button>Agende sua consulta</button>
+        <button
+          on:click={() =>
+            openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+          >Agende sua consulta</button
+        >
       </div>
     </div>
   </div>

@@ -2,6 +2,10 @@
   import { useNavigate } from "svelte-navigator";
 
   let navigate = useNavigate();
+
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
 </script>
 
 <main id="mobile-doc-content">
@@ -28,7 +32,11 @@
       como ministrador e assistente.v</span
     >
     <div class="btn">
-      <button>Agendar Consulta</button>
+      <button
+        on:click={() =>
+          openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+        >Agendar Consulta</button
+      >
     </div>
   </div>
 </main>
