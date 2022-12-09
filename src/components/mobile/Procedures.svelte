@@ -13,6 +13,10 @@
       element.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
+
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
 </script>
 
 <main>
@@ -27,7 +31,12 @@
       </div>
     </div>
   {/each}
-  <button class="last-btn">CONHEÇA OS TRATAMENTOS</button>
+  <button
+    class="last-btn"
+    on:click={() =>
+      openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+    >CONHEÇA OS TRATAMENTOS</button
+  >
 </main>
 
 <style lang="scss">
