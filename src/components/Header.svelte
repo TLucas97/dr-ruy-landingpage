@@ -213,6 +213,7 @@
         padding: 5px 0;
         position: relative;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.3s ease-in-out;
 
