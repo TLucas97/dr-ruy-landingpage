@@ -8,7 +8,7 @@
   import Footer from "./components/Footer.svelte";
 </script>
 
-<Router>
+<Router primary={false}>
   <Header />
   <Route path="/" component={Home} />
   <Route path="/teeth-clear" component={TeethClear} />

@@ -7,6 +7,9 @@
   const openNewTab = (url) => {
     window.open(url, "_blank");
   };
+
+  export let location;
+  export let navigate
 </script>
 
 <main id="web-home fade">
