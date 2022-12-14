@@ -154,42 +154,43 @@
           font-size: 0.6rem;
           color: #333;
           font-weight: 600;
+
+          @media (min-width: 1024px) {
+            width: 70%;
+            font-size: 0.8rem;
+          }
         }
 
         .small-content {
           font-size: 0.6rem;
           color: #333;
           text-align: center;
+
+          @media (min-width: 1024px) {
+            font-size: 0.8rem;
+          }
         }
       }
 
       .btn-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        text-decoration: none;
+        width: 100%;
         a {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 1em;
-          text-decoration: none;
-
+          width: 300px;
           button {
-            width: 70%;
+            width: 100%;
             height: 2.5em;
             background-color: #333;
             color: #fff;
             border: none;
             border-radius: 0.2em;
-            margin-top: 1em;
             font-size: 0.7rem;
             font-weight: bold;
             cursor: pointer;
-
-            @media (min-width: 600px) {
-              width: 60%;
-            }
-            @media (min-width: 768px) {
-              width: 50%;
-            }
           }
         }
       }
