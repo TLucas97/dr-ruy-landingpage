@@ -58,17 +58,17 @@
     <button on:click={() => moveTo("/", "footer")}>Contato</button>
     <button
       on:click={() => {
-        openSpecificModal("clear");
+        moveTo("clareamento-dental", "clear-start");
       }}>Clareamento Dental</button
     >
     <button
       on:click={() => {
-        openSpecificModal("contact");
+        moveTo("lente-de-contato", "contact-start");
       }}>Lentes de contato</button
     >
     <button
       on:click={() => {
-        openSpecificModal("protesys");
+        moveTo("proteses", "protese-start");
       }}>Tipos de prótese</button
     >
   </div>
@@ -98,7 +98,7 @@
         <div class="procedure-area">
           <button
             on:click={() => {
-              moveTo("teeth-clear", "clear-start");
+              moveTo("clareamento-dental", "clear-start");
               open = false;
             }}>Clareamento Dental</button
           >
@@ -106,7 +106,7 @@
         <div class="procedure-area">
           <button
             on:click={() => {
-              moveTo("teeth-contact", "contact-start");
+              moveTo("lente-de-contato", "contact-start");
               open = false;
             }}>Lentes de contato</button
           >

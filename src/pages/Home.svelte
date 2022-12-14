@@ -9,7 +9,7 @@
   };
 
   export let location;
-  export let navigate
+  export let navigate;
 </script>
 
 <main id="web-home fade">

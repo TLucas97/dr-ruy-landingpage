@@ -1,37 +1,23 @@
 <script>
   // @ts-nocheck
   import { globalContent } from "../../../store.js";
-  import Dialog from "@smui/dialog";
-  import TeethClearContent from "../TeethClearContent.svelte";
-  import TeethContactContent from "../TeethContactContent.svelte";
-  import ProtesysContent from "../ProtesysContent.svelte";
+  import { useNavigate } from "svelte-navigator";
 
-  $: open = $globalContent.open;
+  const navigate = useNavigate();
+
   let procedures = $globalContent.simpleProcedures;
-  $: currentModalContent = $globalContent.currentModalContent;
-
-  const openSpecificModal = (content) => {
-    globalContent.update((data) => {
-      return {
-        ...data,
-        open: true,
-        currentModalContent: content,
-      };
-    });
-  };
-
-  const closeModal = () => {
-    globalContent.update((data) => {
-      return {
-        ...data,
-        currentModalContent: "",
-        open: false,
-      };
-    });
-  };
 
   const openNewTab = (url) => {
     window.open(url, "_blank");
+  };
+
+  const moveTo = (route, id) => {
+    navigate(route);
+    open = false;
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 </script>
 
@@ -56,7 +42,10 @@
         PROCEDIMENTO SEGURO EFICAZ E COM RESULTADOS INCRIVEIS!
       </span>
       <div class="btn-area">
-        <button on:click={() => openSpecificModal("contact")}>SAIBA MAIS</button
+        <button
+          on:click={() => {
+            moveTo("clareamento-dental", "clear-start");
+          }}>SAIBA MAIS</button
         >
       </div>
     </div>
@@ -106,28 +95,15 @@
           <hr />
           <span class="title">{procedure.title}</span>
           <span class="description">{procedure.text}</span>
-          <button on:click={() => openSpecificModal(procedure.currentContent)}
-            >Saiba mais</button
+          <button
+            on:click={() => {
+              moveTo(procedure.to, procedure.id);
+            }}>Saiba mais</button
           >
         </div>
       {/each}
     </div>
   </div>
-  <Dialog
-    bind:open
-    scrimClickAction=""
-    escapeKeyAction=""
-    surface$style="width: 700px; max-width: calc(100vw - 32px);"
-  >
-    <button class="modal-close-btn" on:click={closeModal}>X</button>
-    {#if currentModalContent === "clear"}
-      <TeethClearContent />
-    {:else if currentModalContent === "contact"}
-      <TeethContactContent />
-    {:else if currentModalContent === "protesys"}
-      <ProtesysContent />
-    {/if}
-  </Dialog>
 </main>
 
 <style lang="scss">
@@ -359,22 +335,6 @@
             }
           }
         }
-      }
-    }
-
-    .modal-close-btn {
-      margin-top: 3em;
-      padding: 1em;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-      font-weight: bold;
-      position: fixed;
-      background: none;
-      color: red;
-
-      &:hover {
-        transform: scale(1.1);
       }
     }
   }

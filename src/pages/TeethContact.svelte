@@ -1,9 +1,5 @@
 <script>
   import Accordion, { Panel, Header, Content } from "@smui-extra/accordion";
-
-  const openNewTab = (url) => {
-    window.open(url, "_blank");
-  };
 </script>
 
 <main class="fade" id="contact-start">
@@ -81,11 +77,14 @@
         </Panel>
       </Accordion>
       <div class="btn-area">
-        <button
-          on:click={() =>
-            openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
-          >Agende sua consulta</button
+        <a
+          href="https://api.whatsapp.com/send?phone=5591988109828"
+          target="
+        _blank"
+          rel="noreferrer"
         >
+          <button>Agende sua consulta</button>
+        </a>
       </div>
     </div>
   </div>
@@ -128,6 +127,9 @@
         @media (min-width: 768px) {
           width: 50%;
         }
+        @media (min-width: 1024px) {
+          width: 30%;
+        }
       }
 
       small {
@@ -135,10 +137,18 @@
         color: #333;
         text-align: center;
         margin: 1.5em 1em 0 1em;
+
+        @media (min-width: 1024px) {
+          width: 70%;
+        }
       }
 
       .accordion {
         margin-top: 1em;
+
+        @media (min-width: 1024px) {
+          width: 70%;
+        }
 
         .small-header {
           font-size: 0.6rem;
@@ -154,28 +164,32 @@
       }
 
       .btn-area {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1em;
-
-        button {
-          width: 70%;
-          height: 2.5em;
-          background-color: #333;
-          color: #fff;
-          border: none;
-          border-radius: 0.2em;
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           margin-top: 1em;
-          font-size: 0.7rem;
-          font-weight: bold;
+          text-decoration: none;
 
-          @media (min-width: 600px) {
-            width: 60%;
-          }
-          @media (min-width: 768px) {
-            width: 50%;
+          button {
+            width: 70%;
+            height: 2.5em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 0.2em;
+            margin-top: 1em;
+            font-size: 0.7rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            @media (min-width: 600px) {
+              width: 60%;
+            }
+            @media (min-width: 768px) {
+              width: 50%;
+            }
           }
         }
       }
