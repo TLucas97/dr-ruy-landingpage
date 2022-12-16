@@ -53,7 +53,7 @@
         <div>
           <div class="left">📧</div>
           <div class="right">
-            <span>torresdentist@yahoo.com.br</span>
+            <span>ruytorres54@hotmail.com</span>
           </div>
         </div>
       </div>
