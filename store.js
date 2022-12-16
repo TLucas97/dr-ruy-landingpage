@@ -26,4 +26,26 @@ export const globalContent = writable({
       currentContent: "protesys",
     },
   ],
+  otherProcedures: [
+    {
+      title: "Edodontia",
+      to: "edodontia",
+      id: "edodontia-start",
+    },
+    {
+      title: "Periodontia",
+      to: "periodontia",
+      id: "periodontia-start",
+    },
+    {
+      title: "Recobrimento radicular",
+      to: "recobrimento-radicular",
+      id: "recobrimento-radicular-start",
+    },
+    {
+      title: "Carga imediata",
+      to: "protese-carga-imediata",
+      id: "protese-charge-start",
+    },
+  ],
 });

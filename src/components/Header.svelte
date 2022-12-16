@@ -3,10 +3,20 @@
   import IconButton from "@smui/icon-button";
   import Dialog from "@smui/dialog";
   import { useNavigate } from "svelte-navigator";
+  import Select, { Option } from "@smui/select";
+  import { globalContent } from "../../store";
 
   let navigate = useNavigate();
 
   let open = false;
+  let value = null;
+
+  $: {
+    if (value) {
+      const [route, id] = value.split(" ");
+      moveTo(route, id);
+    }
+  }
 
   const moveTo = (route, id) => {
     navigate(route);
@@ -60,11 +70,16 @@
         moveTo("proteses", "protese-start");
       }}>Tipos de prótese</button
     >
-    <button
-      on:click={() => {
-        moveTo("protese-carga-imediata", "protese-charge-start");
-      }}>Carga imediata</button
-    >
+    <div style="color: white !important;">
+      <Select bind:value variant="outlined">
+        <Option value={null}>Procedimentos</Option>
+        {#each $globalContent.otherProcedures as procedure}
+          <Option value={procedure.to + " " + procedure.id}>
+            <span>{procedure.title}</span>
+          </Option>
+        {/each}
+      </Select>
+    </div>
   </div>
   <div class="btn-area">
     <button
@@ -118,6 +133,27 @@
             on:click={() => {
               moveTo("protese-carga-imediata", "protese-charge-start");
             }}>Carga imediata</button
+          >
+        </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("edodontia", "edodontia-start");
+            }}>Edodontia</button
+          >
+        </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("periodontia", "periodontia-start");
+            }}>Periodontia</button
+          >
+        </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("recobrimento-radicular", "recobrimento-radicular-start");
+            }}>Recobrimento Radicular</button
           >
         </div>
       </div>
