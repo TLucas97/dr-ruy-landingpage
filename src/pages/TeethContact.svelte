@@ -29,49 +29,44 @@
         <Panel>
           <Header
             ><span class="small-header">
-              O Clareamento danifica os dentes?
-            </span></Header
-          >
-          <Content>
-            <span class="small-content"
-              >O dente pode ficar mais sensível, mas não poroso ou enfraquecido.
-              Isso ocorre porque os poros ou canalículos ficam abertos para que
-              o gel clareador libere as moléculas de pigmento que estavam
-              impedindo a luz de passar. Porém, o procedimento não corrói o
-              esmalte do dente e essa sensibilidade tende a diminuir após o
-              tratamento.</span
-            >
-          </Content>
-        </Panel>
-        <Panel>
-          <Header
-            ><span class="small-header">
-              Qualquer pessoa pode realizar o clareamento dental?
+              Quais problemas a lente de contato dental corrige?
             </span></Header
           >
           <Content>
             <span class="small-content">
-              O procedimento não é indicado para mulheres grávidas ou que
-              estejam amamentando, pacientes com hipersensibilidade ao
-              medicamento, indivíduos com doença periodontal e presença de
-              muitas restaurações estéticas e/ou retrações gengivais. O
-              clareamento também é contraindicado para crianças de até 10 anos.
+              Mas, o que a lente de contato dental corrige, exatamente? Os
+              problemas mais comuns são os de tonalidade irregular dos dentes,
+              igualando a cor deles para garantir um resultado mais bonito e
+              uniforme.
             </span>
           </Content>
         </Panel>
         <Panel>
           <Header
             ><span class="small-header">
-              O efeito do clareamento dental é permanente?
+              Quem pode usar lente de contato dental?
             </span></Header
           >
           <Content>
             <span class="small-content">
-              Os resultados do tratamento podem durar entre 02 e 05 anos. Isso
-              vai depender dos cuidados que o paciente vai ter. É importante
-              manter a atenção com a alimentação (usar canudo para algumas
-              bebidas pode ajudar), fazer uma boa higiene bucal e visitar
-              regularmente o dentista.
+              As lentes de contato dentais são tratamentos odontológicos
+              estéticos que podem ser feitos por quaisquer pacientes que tenham
+              indicação para o uso dessas próteses.
+            </span>
+          </Content>
+        </Panel>
+        <Panel>
+          <Header
+            ><span class="small-header">
+              Quanto tempo dura lente de contato dental?
+            </span></Header
+          >
+          <Content>
+            <span class="small-content">
+              Uma dúvida recorrente entre os pacientes é quanto tempo dura lente
+              de contato dental. Embora possam passar impressão de fragilidade
+              devido à sua espessura muito fina, as próteses podem durar muito
+              tempo!
             </span>
           </Content>
         </Panel>

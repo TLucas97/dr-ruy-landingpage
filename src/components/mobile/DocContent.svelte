@@ -1,28 +1,65 @@
 <script>
   import { useNavigate } from "svelte-navigator";
+  import Carousel from "svelte-carousel";
 
   let navigate = useNavigate();
 
-  const openNewTab = (url) => {
+  const openNewTab = (/** @type {string | URL} */ url) => {
     window.open(url, "_blank");
   };
+
+  const moveTo = (/** @type {string} */ route, /** @type {string} */ id) => {
+    navigate(route);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
+  let carousel;
 </script>
 
 <main id="mobile-doc-content">
   <div class="banner-section">
     <span class="title">Dr. Ruy Torres</span>
-    <span class="main-title">LENTES DE CONTATO</span>
+    <span class="main-title">Protocolo de carga imediata</span>
     <span class="sub-title"
-      >PROCEDIMENTO SEGURO EFICAZ E COM RESULTADOS INCRIVEIS!</span
+      >Tenha seus dentes de volta em 72 horas. Mastigue melhor, e levante sua
+      auto estima.</span
     >
-    <button on:click={() => navigate("/teeth-contact")}>Saiba mais</button>
+    <button
+      on:click={() => {
+        moveTo("protese-carga-imediata", "protese-charge-start");
+      }}>SAIBA MAIS</button
+    >
   </div>
   <div class="doctor-card">
     <div class="card-header">
       <span class="doc-title">Dr. Ruy Torres</span>
       <small>Cirugião Dentista</small>
     </div>
-    <img src="./images/doc-banner.png" alt="" />
+    <div class="carousel-area">
+      <Carousel
+        bind:this={carousel}
+        autoplay
+        autoplayDuration={4500}
+        autoplayProgressVisible
+        arrows={false}
+      >
+        <div>
+          <img src="./images/doc-banner.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/doc-banner2.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/doc-banner3.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/doc-banner4.png" alt="" />
+        </div>
+      </Carousel>
+    </div>
     <span class="description"
       >Ruy Torres é especialista em periodontia pela USP Bauru, pós graduado em
       implantes dentais pela Branemark System Bauru, também se especializou em
@@ -95,6 +132,18 @@
       display: flex;
       flex-direction: column;
 
+      .carousel-area {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       @media (min-width: 700px) {
         width: 70%;
         margin: 0 auto;
@@ -160,6 +209,7 @@
           text-align: justify;
           margin: 0 auto;
           padding-top: 1em;
+          font-size: 0.8rem;
         }
       }
 

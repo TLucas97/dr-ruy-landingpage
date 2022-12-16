@@ -1,15 +1,13 @@
 <script>
   import DocContent from "../components/mobile/DocContent.svelte";
   import FamilyContennt from "../components/mobile/FamilyContennt.svelte";
+  import Results from "../components/mobile/Results.svelte";
   import Procedures from "../components/mobile/Procedures.svelte";
   import MainWeb from "../components/web/MainWeb.svelte";
 
   const openNewTab = (url) => {
     window.open(url, "_blank");
   };
-
-  export let location;
-  export let navigate;
 </script>
 
 <main id="web-home fade">
@@ -25,6 +23,7 @@
     </div>
     <DocContent />
     <FamilyContennt />
+    <Results />
     <Procedures />
   </div>
   <div class="web">

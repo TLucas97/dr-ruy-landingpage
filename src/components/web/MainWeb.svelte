@@ -2,6 +2,7 @@
   // @ts-nocheck
   import { globalContent } from "../../../store.js";
   import { useNavigate } from "svelte-navigator";
+  import Carousel from "svelte-carousel";
 
   const navigate = useNavigate();
 
@@ -19,6 +20,8 @@
       element.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
+
+  let carousel;
 </script>
 
 <main id="web-start-view">
@@ -37,14 +40,15 @@
   >
     <div class="main-title-content fade-left">
       <span class="title"> DR. RUY TORRES </span>
-      <span class="contact-text"> LENTES DE CONTATO </span>
+      <span class="contact-text"> Protocolo de carga imediata </span>
       <span class="contact-description">
-        PROCEDIMENTO SEGURO EFICAZ E COM RESULTADOS INCRIVEIS!
+        Tenha seus dentes de volta em 72 horas. Mastigue melhor, e levante sua
+        auto estima.
       </span>
       <div class="btn-area">
         <button
           on:click={() => {
-            moveTo("clareamento-dental", "clear-start");
+            moveTo("protese-carga-imediata", "protese-charge-start");
           }}>SAIBA MAIS</button
         >
       </div>
@@ -52,7 +56,28 @@
   </div>
   <div class="overflow-card">
     <div class="doc-card-area">
-      <img src="./images/doc-banner.png" alt="" />
+      <div class="carousel-area">
+        <Carousel
+          bind:this={carousel}
+          autoplay
+          autoplayDuration={4500}
+          autoplayProgressVisible
+          arrows={false}
+        >
+          <div>
+            <img src="./images/doc-banner.png" alt="" />
+          </div>
+          <div>
+            <img src="./images/doc-banner2.png" alt="" />
+          </div>
+          <div>
+            <img src="./images/doc-banner3.png" alt="" />
+          </div>
+          <div>
+            <img src="./images/doc-banner4.png" alt="" />
+          </div>
+        </Carousel>
+      </div>
       <div class="description">
         <span class="title">Dr. Ruy Torres</span>
         <span class="sub-title"> Cirugião Dentista </span>
@@ -87,6 +112,46 @@
       </span>
     </div>
     <img src="./images/family-banner.png" alt="family" />
+  </div>
+  <div class="results-banner-area">
+    <div class="carousel-area">
+      <Carousel
+        bind:this={carousel}
+        autoplay
+        autoplayDuration={4500}
+        autoplayProgressVisible
+        arrows={false}
+      >
+        <div>
+          <img src="./images/results1.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/results2.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/results3.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/results4.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/results5.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/results6.png" alt="" />
+        </div>
+      </Carousel>
+    </div>
+    <div class="family-content">
+      <span class="title"
+        >Transforme seu sorriso com a nossa odontologia de qualidade</span
+      >
+      <span class="description">
+        "Veja os resultados incríveis nas imagens ao lado. Agende já sua
+        consulta e surpreenda-se."
+      </span>
+      <button>Agendar Consulta</button>
+    </div>
   </div>
   <div class="procedures-area">
     <div class="procedure-card">
@@ -186,10 +251,19 @@
         justify-content: space-between;
         padding: 1em;
 
+        .carousel-area {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         img {
-          width: 70%;
+          width: 100%;
           height: 100%;
           object-fit: cover;
+          border-radius: 8px;
         }
 
         .description {
@@ -244,7 +318,14 @@
     .family-banner-area {
       width: 100%;
       height: 500px;
-      background: #091d3e;
+      background: linear-gradient(
+        to right,
+        #091d3e,
+        #1d3768,
+        #1d3768,
+        #1d3768,
+        #091d3e
+      );
       margin-top: 30em;
       display: flex;
       align-items: center;
@@ -255,10 +336,11 @@
         display: flex;
         flex-direction: column;
         color: #ffffff;
-        width: 30%;
+        width: 35%;
 
         .title {
           font-size: 1.8rem;
+          font-weight: bold;
         }
 
         .description {
@@ -269,6 +351,81 @@
 
       img {
         width: 30%;
+      }
+    }
+
+    .results-banner-area {
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(
+        to right,
+        #add8e6,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #87cefa
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+
+      .family-content {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        width: 30%;
+        margin-bottom: 3em;
+
+        .title {
+          font-size: 1.8rem;
+          color: black;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 1rem;
+          margin-top: 0.5em;
+          color: black;
+        }
+      }
+
+      .carousel-area {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2em;
+        border: none;
+      }
+
+      img {
+        width: 100%;
+        height: 350px;
+        border-radius: 8px;
+        border: none;
+        object-fit: fill;
+      }
+
+      button {
+        width: 250px;
+        height: 60px;
+        background: #00bbdc;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 1em;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: #00bbdc9e;
+          color: #ffffff;
+        }
       }
     }
 

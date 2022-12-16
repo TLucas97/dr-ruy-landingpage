@@ -12,7 +12,14 @@
 
 <style lang="scss">
   main {
-    background: #091d3e;
+    background: linear-gradient(
+      to right,
+      #091d3e,
+      #1d3768,
+      #1d3768,
+      #1d3768,
+      #091d3e
+    );
     padding: 1.5em;
     display: flex;
     flex-direction: column;

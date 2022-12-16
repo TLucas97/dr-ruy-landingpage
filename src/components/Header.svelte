@@ -3,7 +3,6 @@
   import IconButton from "@smui/icon-button";
   import Dialog from "@smui/dialog";
   import { useNavigate } from "svelte-navigator";
-  import { globalContent } from "../../store.js";
 
   let navigate = useNavigate();
 
@@ -16,16 +15,6 @@
       const element = document.getElementById(id);
       element.scrollIntoView({ behavior: "smooth" });
     }, 100);
-  };
-
-  const openSpecificModal = (content) => {
-    globalContent.update((data) => {
-      return {
-        ...data,
-        open: true,
-        currentModalContent: content,
-      };
-    });
   };
 
   const openNewTab = (url) => {
@@ -70,6 +59,11 @@
       on:click={() => {
         moveTo("proteses", "protese-start");
       }}>Tipos de prótese</button
+    >
+    <button
+      on:click={() => {
+        moveTo("protese-carga-imediata", "protese-charge-start");
+      }}>Carga imediata</button
     >
   </div>
   <div class="btn-area">
@@ -119,6 +113,13 @@
             }}>Tipos de prótese</button
           >
         </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("protese-carga-imediata", "protese-charge-start");
+            }}>Carga imediata</button
+          >
+        </div>
       </div>
     </div>
   </Dialog>
@@ -129,7 +130,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2775ba;
+    background: linear-gradient(
+      to right,
+      #2775ba,
+      #4677d6,
+      #4677d6,
+      #4677d6,
+      #2775ba
+    );
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -140,6 +148,7 @@
       width: 50px;
       height: 50px;
       margin-left: 0.4em;
+      cursor: pointer;
     }
 
     .menu-mobile-btn {

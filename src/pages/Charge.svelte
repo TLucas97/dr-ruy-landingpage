@@ -1,74 +1,53 @@
 <script>
   import Accordion, { Panel, Header, Content } from "@smui-extra/accordion";
-
-  const openNewTab = (/** @type {string | URL} */ url) => {
-    window.open(url, "_blank");
-  };
 </script>
 
-<main class="fade" id="clear-start">
-  <div class="section-1">
-    <span class="title">CLAREAMENTO DENTAL</span>
-    <img src="./images/clareamento1.png" alt="clareamento" />
-    <small class="clear-description"
-      >O clareamento dental é uma microlimpeza da estrututura do dente. Por
-      causa de pigmentos externos, com o passar do tempo, o dente fica com uma
-      cor mais amarelada. Por meio da ação dos radicais livres, como oxigênio, é
-      provocada a oxidação dos pigmentos orgânicos agindo na oxidação de
-      proteínas e aminoácidos, além da possibilidade do clareamento da estrutura
-      mineral do dente.</small
+<main class="fade" id="protese-charge-start">
+  <div class="section">
+    <span class="title"> Protocolo de carga imediata </span>
+    <img src="./images/charge.png" alt="lente" />
+    <small
+      >Esta técnica é consagrada na implantodontia , onde é feito a substituição
+      da prótese total (dentadura) por dentes fixos na boca por implantes
+      dentários. Pode ser realizado tanto na arcada superior como na inferior.</small
     >
+    <small>
+      A prótese protocolo sobre implante é uma das inúmeras soluções em
+      implantes dentários que existem atualmente. Porém, a prótese protocolo
+      ganha destaque por proporcionar a seus usuários uma função mastigatória
+      perfeita, tornando-se tão natural quanto uma arcada dentária original.
+    </small>
     <span class="title2">Perguntas frequentes</span>
     <div class="accordion">
       <Accordion>
         <Panel>
           <Header
             ><span class="small-header">
-              O Clareamento danifica os dentes?
+              Como é feito o tratamento?
             </span></Header
           >
           <Content>
             <span class="small-content"
-              >O dente pode ficar mais sensível, mas não poroso ou enfraquecido.
-              Isso ocorre porque os poros ou canalículos ficam abertos para que
-              o gel clareador libere as moléculas de pigmento que estavam
-              impedindo a luz de passar. Porém, o procedimento não corrói o
-              esmalte do dente e essa sensibilidade tende a diminuir após o
-              tratamento.</span
+              >Na prótese tipo protocolo sobre implantes, normalmente o
+              tratamento é feito com carga imediata e o paciente fica livre da
+              dentadura em 3 dias, voltando a ter dentes fixos, o que devolve a
+              segurança, o conforto e o bem estar ao sorrir e comer.</span
             >
           </Content>
         </Panel>
         <Panel>
           <Header
             ><span class="small-header">
-              Qualquer pessoa pode realizar o clareamento dental?
+              Posso ter desconforto?
             </span></Header
           >
           <Content>
             <span class="small-content">
-              O procedimento não é indicado para mulheres grávidas ou que
-              estejam amamentando, pacientes com hipersensibilidade ao
-              medicamento, indivíduos com doença periodontal e presença de
-              muitas restaurações estéticas e/ou retrações gengivais. O
-              clareamento também é contraindicado para crianças de até 10 anos.
-            </span>
-          </Content>
-        </Panel>
-        <Panel>
-          <Header
-            ><span class="small-header">
-              O efeito do clareamento dental é permanente?
-            </span></Header
+              Uma vez tomados os devidos cuidados e medicamentos, o processo
+              costuma ser bem confortável, até mesmo mais do que extrações
+              dentárias.
+            </span></Content
           >
-          <Content>
-            <span class="small-content">
-              Os resultados do tratamento podem durar entre 02 e 05 anos. Isso
-              vai depender dos cuidados que o paciente vai ter. É importante
-              manter a atenção com a alimentação (usar canudo para algumas
-              bebidas pode ajudar), fazer uma boa higiene bucal e visitar
-              regularmente o dentista.
-            </span>
-          </Content>
         </Panel>
       </Accordion>
       <div class="btn-area">
@@ -91,7 +70,7 @@
     background-color: #f5f5f5;
     padding: 4em 0;
 
-    .section-1 {
+    .section {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -112,17 +91,6 @@
         margin-top: 1.5em;
       }
 
-      small {
-        font-size: 0.7rem;
-        color: #333;
-        text-align: center;
-        margin: 1.5em 1em 0 1em;
-
-        @media (min-width: 1024px) {
-          width: 70%;
-        }
-      }
-
       img {
         width: 80%;
         margin-top: 1em;
@@ -138,8 +106,19 @@
         }
       }
 
+      small {
+        font-size: 0.7rem;
+        color: #333;
+        text-align: center;
+        margin: 1.5em 1em 0 1em;
+
+        @media (min-width: 1024px) {
+          width: 70%;
+        }
+      }
+
       .accordion {
-        margin-top: 0.8em;
+        margin-top: 1em;
 
         @media (min-width: 1024px) {
           width: 70%;
