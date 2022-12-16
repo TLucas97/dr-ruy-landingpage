@@ -150,7 +150,11 @@
         "Veja os resultados incríveis nas imagens ao lado. Agende já sua
         consulta e surpreenda-se."
       </span>
-      <button>Agendar Consulta</button>
+      <button
+        on:click={() =>
+          openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+        >Agendar Consulta</button
+      >
     </div>
   </div>
   <div class="procedures-area">

@@ -1,3 +1,9 @@
+<script>
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
+</script>
+
 <main>
   <img src="./images/results3.png" alt="family" />
   <span class="title"
@@ -9,7 +15,11 @@
       e surpreenda-se."
     </span>
   </div>
-  <button>Agende sua consulta</button>
+  <button
+    on:click={() =>
+      openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
+    >Agende sua consulta</button
+  >
 </main>
 
 <style lang="scss">
