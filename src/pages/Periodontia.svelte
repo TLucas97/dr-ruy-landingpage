@@ -93,6 +93,7 @@
         color: #333;
         font-size: 1rem;
         font-weight: 600;
+        text-align: center;
       }
 
       .title2 {
@@ -100,6 +101,7 @@
         font-size: 1.2rem;
         font-weight: 600;
         margin-top: 1.5em;
+        text-align: center;
       }
 
       img {
