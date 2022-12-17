@@ -70,16 +70,14 @@
         moveTo("proteses", "protese-start");
       }}>Tipos de prótese</button
     >
-    <div style="color: white !important;">
-      <Select bind:value variant="outlined">
-        <Option value={null}>Procedimentos</Option>
-        {#each $globalContent.otherProcedures as procedure}
-          <Option value={procedure.to + " " + procedure.id}>
-            <span>{procedure.title}</span>
-          </Option>
-        {/each}
-      </Select>
-    </div>
+    <Select bind:value variant="outlined">
+      <Option value={null}>Procedimentos</Option>
+      {#each $globalContent.otherProcedures as procedure}
+        <Option value={procedure.to + " " + procedure.id}>
+          <span>{procedure.title}</span>
+        </Option>
+      {/each}
+    </Select>
   </div>
   <div class="btn-area">
     <button
