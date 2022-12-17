@@ -54,7 +54,7 @@
   </div>
   <div
     class="first-section-banner"
-    style={`background-image: url('./images/${currentBg}'); transition: background 0.3s ease-in-out`}
+    style={`background-image: url('./images/${currentBg}')`}
   >
     <div class="main-title-content fade-left">
       <span class="title"> DR. RUY TORRES </span>
