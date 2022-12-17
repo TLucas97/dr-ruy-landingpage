@@ -47,5 +47,10 @@ export const globalContent = writable({
       to: "protese-carga-imediata",
       id: "protese-charge-start",
     },
+    {
+      title: "Reabilitacao Oral",
+      to: "reabilitacao-oral",
+      id: "rehab-start",
+    },
   ],
 });

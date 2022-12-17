@@ -1,5 +1,10 @@
+<script>
+  export let height = "80px";
+  export let width = ""
+</script>
+
 <div class="mapouter">
-  <div class="gmap_canvas">
+  <div class="gmap_canvas" style={`height: ${height}; width: ${width}`}>
     <!-- svelte-ignore a11y-missing-attribute -->
     <iframe
       class="gmap_iframe"
@@ -23,7 +28,6 @@
       overflow: hidden;
       background: none !important;
       width: 70%;
-      height: 80px;
       margin: 0 auto;
     }
     .gmap_iframe {

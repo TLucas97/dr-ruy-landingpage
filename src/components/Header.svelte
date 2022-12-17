@@ -156,6 +156,13 @@
             }}>Recobrimento Radicular</button
           >
         </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("reabilitacao-oral", "rehab-start");
+            }}>Reabilitação Oral</button
+          >
+        </div>
       </div>
     </div>
   </Dialog>

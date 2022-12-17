@@ -3,10 +3,28 @@
   import { globalContent } from "../../../store.js";
   import { useNavigate } from "svelte-navigator";
   import Carousel from "svelte-carousel";
+  import GoogleMap from "../GoogleMap.svelte";
 
   const navigate = useNavigate();
 
   let procedures = $globalContent.simpleProcedures;
+  let currentBg = "banner.png";
+
+  const changeCurrentBgFromTimeToTime = () => {
+    setInterval(() => {
+      if (currentBg === "banner.png") {
+        currentBg = "banner2.png";
+      } else if (currentBg === "banner2.png") {
+        currentBg = "banner3.png";
+      } else if (currentBg === "banner3.png") {
+        currentBg = "banner4.png";
+      } else if (currentBg === "banner4.png") {
+        currentBg = "banner.png";
+      }
+    }, 10000);
+  };
+
+  changeCurrentBgFromTimeToTime();
 
   const openNewTab = (url) => {
     window.open(url, "_blank");
@@ -36,7 +54,7 @@
   </div>
   <div
     class="first-section-banner"
-    style="background-image: url('./images/banner.png')"
+    style={`background-image: url('./images/${currentBg}'); transition: background 0.3s ease-in-out`}
   >
     <div class="main-title-content fade-left">
       <span class="title"> DR. RUY TORRES </span>
@@ -155,6 +173,49 @@
           openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
         >Agendar Consulta</button
       >
+    </div>
+  </div>
+  <div class="places-banner-area">
+    <div class="family-content">
+      <span class="title"
+        >Descubra a clínica odontológica de excelência em nossa localização
+        privilegiada</span
+      >
+      <span class="description">
+        Venha conhecer nossa clínica odontológica na área nobre da cidade.
+        Oferecemos atendimento de qualidade em um ambiente acolhedor e
+        tranquilo. Contamos com equipamentos modernos e tecnológicos para
+        garantir o melhor para nossos pacientes. Estamos ansiosos para
+        atendê-lo!
+      </span>
+      <button
+        on:click={() =>
+          openNewTab(
+            "https://www.google.com/maps/dir//R.+Domingos+Marreiros,+49+-+F%C3%A1tima+Bel%C3%A9m+-+PA+66060-162/@-1.4468789,-48.4869065,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x92a48e984ca29323:0x23387a5169f38ec1"
+          )}>Saiba mais</button
+      >
+    </div>
+    <div class="carousel-area">
+      <Carousel
+        bind:this={carousel}
+        autoplay
+        autoplayDuration={4500}
+        autoplayProgressVisible
+        arrows={false}
+      >
+        <div>
+          <GoogleMap height="350px" width="100%" />
+        </div>
+        <div>
+          <img src="./images/place1.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/place2.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/place3.png" alt="" />
+        </div>
+      </Carousel>
     </div>
   </div>
   <div class="procedures-area">
@@ -401,6 +462,82 @@
         justify-content: center;
         align-items: center;
         margin-right: 2em;
+        border: none;
+      }
+
+      img {
+        width: 100%;
+        height: 350px;
+        border-radius: 8px;
+        border: none;
+        object-fit: fill;
+      }
+
+      button {
+        width: 250px;
+        height: 60px;
+        background: #00bbdc;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 1em;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: #00bbdc9e;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .places-banner-area {
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(
+        to right,
+        #ffffff,
+        #f2f2f2,
+        #e5e3df,
+        #e6e6e6,
+        #fff7f7,
+        #f7eaea
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+
+      .family-content {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        width: 30%;
+        margin-bottom: 1.7em;
+
+        .title {
+          font-size: 1.8rem;
+          color: black;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 1rem;
+          margin-top: 0.5em;
+          color: black;
+        }
+      }
+
+      .carousel-area {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2em;
         border: none;
       }
 
