@@ -3,6 +3,7 @@
   import FamilyContennt from "../components/mobile/FamilyContennt.svelte";
   import Results from "../components/mobile/Results.svelte";
   import Procedures from "../components/mobile/Procedures.svelte";
+  import Rehab from "../components/mobile/Rehab.svelte";
   import MainWeb from "../components/web/MainWeb.svelte";
 
   const openNewTab = (url) => {
@@ -24,6 +25,7 @@
     <DocContent />
     <FamilyContennt />
     <Results />
+    <Rehab />
     <Procedures />
   </div>
   <div class="web">

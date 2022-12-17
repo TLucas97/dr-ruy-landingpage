@@ -5,20 +5,24 @@
 </script>
 
 <main>
-  <img src="./images/results3.png" alt="family" />
+  <img src="./images/place1.png" alt="family" />
   <span class="title"
-    >Transforme seu sorriso com a nossa odontologia de qualidade</span
+    >Descubra a clínica odontológica de excelência em nossa localização
+    privilegiada</span
   >
   <div class="description">
     <span>
-      "Veja os resultados incríveis nas imagens ao lado. Agende já sua consulta
-      e surpreenda-se."
+      Venha conhecer nossa clínica odontológica na área nobre da cidade.
+      Oferecemos atendimento de qualidade em um ambiente acolhedor e tranquilo.
+      Contamos com equipamentos modernos e tecnológicos para garantir o melhor
+      para nossos pacientes. Estamos ansiosos para atendê-lo!
     </span>
   </div>
   <button
     on:click={() =>
-      openNewTab("https://api.whatsapp.com/send?phone=5591988109828")}
-    >Agende sua consulta</button
+      openNewTab(
+        "https://www.google.com/maps/dir//R.+Domingos+Marreiros,+49+-+F%C3%A1tima+Bel%C3%A9m+-+PA+66060-162/@-1.4468789,-48.4869065,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x92a48e984ca29323:0x23387a5169f38ec1"
+      )}>Saiba mais</button
   >
 </main>
 
@@ -26,11 +30,12 @@
   main {
     background: linear-gradient(
       to right,
-      #add8e6,
       #ffffff,
-      #ffffff,
-      #ffffff,
-      #87cefa
+      #f2f2f2,
+      #e5e3df,
+      #e6e6e6,
+      #fff7f7,
+      #f7eaea
     );
     padding: 1.5em;
     display: flex;
