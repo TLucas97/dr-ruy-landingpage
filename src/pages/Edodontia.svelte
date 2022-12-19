@@ -313,6 +313,7 @@
           font-size: 0.8rem;
           color: #333;
           font-weight: 600;
+          text-transform: uppercase;
 
           @media (min-width: 880px) {
             width: 70%;

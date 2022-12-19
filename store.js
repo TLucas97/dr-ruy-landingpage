@@ -28,7 +28,7 @@ export const globalContent = writable({
   ],
   otherProcedures: [
     {
-      title: "Edodontia",
+      title: "Endodontia",
       to: "edodontia",
       id: "edodontia-start",
     },
