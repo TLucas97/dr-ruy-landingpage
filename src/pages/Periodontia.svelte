@@ -158,14 +158,14 @@
       align-items: center;
 
       @media (max-width: 1080px) {
-        width: 80%;
+        width: 95%;
       }
 
       div {
         img {
           width: 100%;
-          height: 380px;
-          object-fit: cover;
+          height: 300px;
+          object-fit: fill;
           border-radius: 8px;
         }
       }
