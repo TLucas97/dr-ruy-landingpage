@@ -1,5 +1,10 @@
 <script>
+  // @ts-nocheck
+
   import Accordion, { Panel, Header, Content } from "@smui-extra/accordion";
+  import Carousel from "svelte-carousel";
+
+  let carousel;
 </script>
 
 <main class="fade" id="protese-charge-start">
@@ -8,7 +13,31 @@
       Periodontia: tudo o que você deve saber sobre essa especialidade da
       odontologia
     </span>
-    <img src="./images/periodontia.png" alt="lente" />
+    <div class="carousel-area">
+      <Carousel
+        bind:this={carousel}
+        autoplay
+        autoplayDuration={4500}
+        autoplayProgressVisible
+        arrows={false}
+      >
+        <div>
+          <img src="./images/periodontia.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/periodontia1.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/periodontia2.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/periodontia3.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/periodontia4.png" alt="" />
+        </div>
+      </Carousel>
+    </div>
     <small
       >Periodontia é a especialidade odontológica que trata dos tecidos do
       periodonto, ou seja, aqueles que dão sustentação para os dentes. Seus
@@ -61,16 +90,57 @@
           >
         </Panel>
       </Accordion>
-      <div class="btn-area">
-        <a
-          href="https://api.whatsapp.com/send?phone=5591988109828"
-          target="
-          _blank"
-          rel="noreferrer"
-        >
-          <button>Agende sua consulta</button>
-        </a>
-      </div>
+    </div>
+    <span class="title2">Quais são as áreas da periodontia?</span>
+    <div class="accordion">
+      <Accordion>
+        <Panel>
+          <Header
+            ><span class="small-header">
+              Periodontia clínica e médica
+            </span></Header
+          >
+          <Content>
+            <span class="small-content"
+              >Essa área é voltada para a prevenção e o tratamento das doenças
+              na gengiva e demais tecidos periodontais. Os procedimentos são
+              terapêuticos, visando, principalmente, ao equilíbrio da saúde da
+              boca. A área clínica cuida das doenças de gengiva mesmo, atuamos
+              diretamente na boca do paciente. Falamos muito da área médica,
+              como medicina periodontal, e da relação com doenças sistêmicas que
+              agravam o problema periodontal, como diabetes e tabagismo.</span
+            >
+          </Content>
+        </Panel>
+        <Panel>
+          <Header
+            ><span class="small-header"> Periodontia estética </span></Header
+          >
+          <Content>
+            <span class="small-content">
+              A periodontia estética, por sua vez, é aquela que objetiva
+              promover simetria entre os tecidos do periodonto, os dentes e a
+              face da pessoa de um modo geral. São realizados procedimentos e
+              tratamentos para harmonizar o conjunto. É o que acontece, por
+              exemplo, com pessoas que apresentam sorriso gengival. Nesse caso,
+              muitas vezes, há um crescimento exagerado da gengiva, e o
+              periodontista realiza intervenções para reduzir o tamanho dela, a
+              fim de promover um aumento da coroa e deixar os dentes mais
+              evidentes.
+            </span></Content
+          >
+        </Panel>
+      </Accordion>
+    </div>
+    <div class="btn-area">
+      <a
+        href="https://api.whatsapp.com/send?phone=5591988109828"
+        target="
+        _blank"
+        rel="noreferrer"
+      >
+        <button>Agende sua consulta</button>
+      </a>
     </div>
   </div>
 </main>
@@ -80,6 +150,26 @@
     width: 100%;
     background-color: #f5f5f5;
     padding: 4em 0;
+
+    .carousel-area {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 1080px) {
+        width: 80%;
+      }
+
+      div {
+        img {
+          width: 100%;
+          height: 380px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
 
     .section {
       width: 100%;
@@ -91,16 +181,18 @@
 
       .title {
         color: #333;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 600;
         text-align: center;
+        text-transform: uppercase;
+        margin-top: 1em;
       }
 
       .title2 {
         color: #333;
         font-size: 1.2rem;
         font-weight: 600;
-        margin-top: 1.5em;
+        margin-top: 2.5em;
         text-align: center;
       }
 
@@ -127,6 +219,7 @@
 
         @media (min-width: 1024px) {
           width: 70%;
+          font-size: 0.9rem;
         }
       }
 
@@ -138,13 +231,13 @@
         }
 
         .small-header {
-          font-size: 0.6rem;
+          font-size: 0.9rem;
           color: #333;
           font-weight: 600;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 880px) {
             width: 70%;
-            font-size: 0.8rem;
+            font-size: 1rem;
           }
         }
 
