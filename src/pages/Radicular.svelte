@@ -77,6 +77,26 @@
     background-color: #f5f5f5;
     padding: 4em 0;
 
+    .carousel-area {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 1080px) {
+        width: 80%;
+      }
+
+      div {
+        img {
+          width: 100%;
+          height: 380px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+
     .section {
       width: 100%;
       display: flex;
@@ -87,15 +107,19 @@
 
       .title {
         color: #333;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 1em;
       }
 
       .title2 {
         color: #333;
         font-size: 1.2rem;
         font-weight: 600;
-        margin-top: 1.5em;
+        margin-top: 2.5em;
+        text-align: center;
       }
 
       img {
@@ -121,6 +145,7 @@
 
         @media (min-width: 1024px) {
           width: 70%;
+          font-size: 0.9rem;
         }
       }
 
@@ -132,13 +157,13 @@
         }
 
         .small-header {
-          font-size: 0.6rem;
+          font-size: 0.9rem;
           color: #333;
           font-weight: 600;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 880px) {
             width: 70%;
-            font-size: 0.8rem;
+            font-size: 1rem;
           }
         }
 

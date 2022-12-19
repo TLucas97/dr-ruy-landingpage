@@ -101,8 +101,9 @@
 
       .title {
         color: #333;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 600;
+        margin-top: 1em;
       }
 
       .title2 {
@@ -113,13 +114,14 @@
       }
 
       small {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         color: #333;
         text-align: center;
         margin: 1.5em 1em 0 1em;
 
         @media (min-width: 1024px) {
           width: 70%;
+          font-size: 1rem;
         }
       }
 
@@ -146,13 +148,13 @@
         }
 
         .small-header {
-          font-size: 0.6rem;
+          font-size: 0.9rem;
           color: #333;
           font-weight: 600;
 
           @media (min-width: 1024px) {
             width: 70%;
-            font-size: 0.8rem;
+            font-size: 1rem;
           }
         }
 
