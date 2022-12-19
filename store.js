@@ -29,8 +29,8 @@ export const globalContent = writable({
   otherProcedures: [
     {
       title: "Endodontia",
-      to: "edodontia",
-      id: "edodontia-start",
+      to: "endodontia",
+      id: "endodontia-start",
     },
     {
       title: "Periodontia",

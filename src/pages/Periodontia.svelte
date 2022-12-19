@@ -7,7 +7,7 @@
   let carousel;
 </script>
 
-<main class="fade" id="protese-charge-start">
+<main class="fade" id="periodontia-start">
   <div class="section">
     <span class="title">
       Periodontia: tudo o que você deve saber sobre essa especialidade da

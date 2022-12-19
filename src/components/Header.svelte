@@ -136,8 +136,8 @@
         <div class="procedure-area">
           <button
             on:click={() => {
-              moveTo("edodontia", "edodontia-start");
-            }}>Edodontia</button
+              moveTo("endodontia", "endodontia-start");
+            }}>Endodontia</button
           >
         </div>
         <div class="procedure-area">

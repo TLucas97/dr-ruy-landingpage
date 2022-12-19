@@ -7,7 +7,7 @@
   let carousel;
 </script>
 
-<main class="fade" id="protese-charge-start">
+<main class="fade" id="endodontia-start">
   <div class="section">
     <span class="title">
       Endodontia: tudo que você precisa saber sobre tratamento de canal

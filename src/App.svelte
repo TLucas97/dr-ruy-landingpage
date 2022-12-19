@@ -5,7 +5,7 @@
   import TeethContact from "./pages/TeethContact.svelte";
   import Protesys from "./pages/Protesys.svelte";
   import Charge from "./pages/Charge.svelte";
-  import Edodontia from "./pages/Edodontia.svelte";
+  import Endodontia from "./pages/Endodontia.svelte";
   import Periodontia from "./pages/Periodontia.svelte";
   import Radicular from "./pages/Radicular.svelte";
   import OralRehab from "./pages/OralRehab.svelte";
@@ -21,7 +21,7 @@
   <Route path="proteses" component={Protesys} />
   <Route path="protese-carga-imediata" component={Charge} />
   <Route path="periodontia" component={Periodontia} />
-  <Route path="edodontia" component={Edodontia} />
+  <Route path="endodontia" component={Endodontia} />
   <Route path="recobrimento-radicular" component={Radicular} />
   <Route path="reabilitacao-oral" component={OralRehab} />
   <Footer />
