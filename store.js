@@ -43,11 +43,6 @@ export const globalContent = writable({
       id: "recobrimento-radicular-start",
     },
     {
-      title: "Carga imediata",
-      to: "protese-carga-imediata",
-      id: "protese-charge-start",
-    },
-    {
       title: "Reabilitacao Oral",
       to: "reabilitacao-oral",
       id: "rehab-start",

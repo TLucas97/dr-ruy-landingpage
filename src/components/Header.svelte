@@ -67,8 +67,8 @@
     >
     <button
       on:click={() => {
-        moveTo("proteses", "protese-start");
-      }}>Tipos de prótese</button
+        moveTo("protese-carga-imediata", "protese-charge-start");
+      }}>Protése Protocolo - Carga Imediata</button
     >
     <Select bind:value variant="outlined">
       <Option value={null}>Procedimentos</Option>
@@ -121,16 +121,8 @@
         <div class="procedure-area">
           <button
             on:click={() => {
-              moveTo("proteses", "protese-start");
-              open = false;
-            }}>Tipos de prótese</button
-          >
-        </div>
-        <div class="procedure-area">
-          <button
-            on:click={() => {
               moveTo("protese-carga-imediata", "protese-charge-start");
-            }}>Carga imediata</button
+            }}>Protése Protocolo - Carga Imediata</button
           >
         </div>
         <div class="procedure-area">

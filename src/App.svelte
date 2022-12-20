@@ -3,7 +3,6 @@
   import Home from "./pages/Home.svelte";
   import TeethClear from "./pages/TeethClear.svelte";
   import TeethContact from "./pages/TeethContact.svelte";
-  import Protesys from "./pages/Protesys.svelte";
   import Charge from "./pages/Charge.svelte";
   import Endodontia from "./pages/Endodontia.svelte";
   import Periodontia from "./pages/Periodontia.svelte";
@@ -18,7 +17,6 @@
   <Route path="/" component={Home} />
   <Route path="clareamento-dental" component={TeethClear} />
   <Route path="lente-de-contato" component={TeethContact} />
-  <Route path="proteses" component={Protesys} />
   <Route path="protese-carga-imediata" component={Charge} />
   <Route path="periodontia" component={Periodontia} />
   <Route path="endodontia" component={Endodontia} />

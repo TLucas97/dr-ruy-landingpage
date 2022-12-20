@@ -33,9 +33,6 @@
         <div>
           <img src="./images/periodontia3.png" alt="" />
         </div>
-        <div>
-          <img src="./images/periodontia4.png" alt="" />
-        </div>
       </Carousel>
     </div>
     <small
