@@ -204,10 +204,10 @@
         arrows={false}
       >
         <div>
-          <GoogleMap height="350px" width="100%" />
+          <img src="./images/place4.png" alt="" />
         </div>
         <div>
-          <img src="./images/place1.png" alt="" />
+          <GoogleMap height="350px" width="100%" />
         </div>
         <div>
           <img src="./images/place2.png" alt="" />

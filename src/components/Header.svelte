@@ -153,6 +153,13 @@
             }}>Reabilitação Oral</button
           >
         </div>
+        <div class="procedure-area">
+          <button
+            on:click={() => {
+              moveTo("canal-dentario", "channel-start");
+            }}>Tratamento de canal dentário</button
+          >
+        </div>
       </div>
     </div>
   </Dialog>

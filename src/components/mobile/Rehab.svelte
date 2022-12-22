@@ -5,7 +5,7 @@
 </script>
 
 <main>
-  <img src="./images/place1.png" alt="family" />
+  <img src="./images/place4.png" alt="family" />
   <span class="title"
     >Descubra a clínica odontológica de excelência em nossa localização
     privilegiada</span

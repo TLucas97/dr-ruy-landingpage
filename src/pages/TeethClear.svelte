@@ -1,5 +1,8 @@
 <script>
   import Accordion, { Panel, Header, Content } from "@smui-extra/accordion";
+  import Carousel from "svelte-carousel";
+
+  let carousel;
 
   const openNewTab = (/** @type {string | URL} */ url) => {
     window.open(url, "_blank");
@@ -9,7 +12,22 @@
 <main class="fade" id="clear-start">
   <div class="section-1">
     <span class="title">CLAREAMENTO DENTAL</span>
-    <img src="./images/clareamento1.png" alt="clareamento" />
+    <div class="carousel-area">
+      <Carousel
+        bind:this={carousel}
+        autoplay
+        autoplayDuration={4500}
+        autoplayProgressVisible
+        arrows={false}
+      >
+        <div>
+          <img src="./images/clareamento1.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/clareamento2.png" alt="" />
+        </div>
+      </Carousel>
+    </div>
     <small class="clear-description"
       >O clareamento dental é uma microlimpeza da estrututura do dente. Por
       causa de pigmentos externos, com o passar do tempo, o dente fica com uma
@@ -90,6 +108,26 @@
     width: 100%;
     background-color: #f5f5f5;
     padding: 4em 0;
+
+    .carousel-area {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 1080px) {
+        width: 95%;
+      }
+
+      div {
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: fill;
+          border-radius: 8px;
+        }
+      }
+    }
 
     .section-1 {
       width: 100%;

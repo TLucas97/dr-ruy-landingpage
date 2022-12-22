@@ -47,5 +47,10 @@ export const globalContent = writable({
       to: "reabilitacao-oral",
       id: "rehab-start",
     },
+    {
+      title: "Tratamento de canal dentário",
+      to: "canal-dentario",
+      id: "channel-start",
+    },
   ],
 });

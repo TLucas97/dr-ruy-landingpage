@@ -8,6 +8,7 @@
   import Periodontia from "./pages/Periodontia.svelte";
   import Radicular from "./pages/Radicular.svelte";
   import OralRehab from "./pages/OralRehab.svelte";
+  import Channel from "./pages/Channel.svelte";
   import Header from "./components/Header.svelte";
   import Footer from "./components/Footer.svelte";
 </script>
@@ -22,5 +23,6 @@
   <Route path="endodontia" component={Endodontia} />
   <Route path="recobrimento-radicular" component={Radicular} />
   <Route path="reabilitacao-oral" component={OralRehab} />
+  <Route path="canal-dentario" component={Channel} />
   <Footer />
 </Router>
